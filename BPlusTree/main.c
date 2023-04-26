@@ -9,10 +9,10 @@
 int main(int argc, char* arv[]) {
     
     //sparse
-    setupSparseTree(6);
+//    setupSparseTree(6);
     
     //dense
-//    setupDenseTree(6);
+    setupDenseTree(4);
     
     //create a root and initialize to null
     tree_node *bTree = NULL;
@@ -33,12 +33,6 @@ int main(int argc, char* arv[]) {
     bTree = insertion(bTree, 40);
     bTree = insertion(bTree, 25);
     
-    bTree = insertion(bTree, 45);
-    bTree = insertion(bTree, 3);
-    bTree = insertion(bTree, 6);
-    bTree = insertion(bTree, 2);
-    bTree = insertion(bTree, 99);
-    
 //    //generate the data
 //    generateData();
 //
@@ -50,7 +44,7 @@ int main(int argc, char* arv[]) {
     //show the tree in the console
     showBTree(bTree);
     
-    //search if 6 exists
+    //search
     search(bTree, 35, true);
     search(bTree, 1, true);
     search(bTree, 2, true);
@@ -58,11 +52,9 @@ int main(int argc, char* arv[]) {
     search(bTree, 98, true);
     search(bTree, 99, true);
     
-//    findRange(bTree, 6, 16, true, NULL, NULL);
-//    findAndPrintRange(bTree, 6, 47, true);
     rangeSearch(bTree, 1, 99);
     
-//    delete a node
+//    delete nodes
     bTree = deletion(bTree, 1);
     bTree = deletion(bTree, 7);
     bTree = deletion(bTree, 11);
